@@ -1,6 +1,7 @@
 package com.gossiperl.client.encryption;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
@@ -11,7 +12,6 @@ import java.security.*;
 public class Aes256 {
 
     private SecretKeySpec key;
-    private static Logger LOG = Logger.getLogger(Aes256.class);
 
     public Aes256(String key) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
